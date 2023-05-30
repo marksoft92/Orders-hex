@@ -1,4 +1,3 @@
-// formSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { AppThunk, RootState } from '../../app/store';
@@ -39,7 +38,7 @@ const formSlice = createSlice({
         formSubmissionFailure: (state, action: PayloadAction<string>) => {
             state.submitting = false;
             state.success = false
-            state.error.message = action.payload;
+            state.error.message = Object.values(action.payload)[0];
         },
     },
 });
@@ -56,8 +55,7 @@ export const submitForm = (values: FormValues): AppThunk => async (dispatch, get
 
         dispatch(formSubmissionSuccess());
     } catch (error: any) {
-        console.log(error)
-        dispatch(formSubmissionFailure(error.message));
+        dispatch(formSubmissionFailure(error.response.data));
     }
 };
 

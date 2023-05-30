@@ -3,7 +3,7 @@ import { InputNumber,Slider } from 'antd';
 import { FormattedMessage } from 'react-intl';
 
 interface PizzaFieldsProps {
-    handleChange: (value: number | null) => void;
+
     handleBlur: (e: React.FocusEvent<any>) => void;
     values: any;
     errors: any;
@@ -11,7 +11,7 @@ interface PizzaFieldsProps {
 }
 
 const PizzaFields: React.FC<PizzaFieldsProps> = ({
-    handleChange,
+
     handleBlur,
     values,
     errors,
@@ -32,7 +32,7 @@ const PizzaFields: React.FC<PizzaFieldsProps> = ({
                     min={1}
                 />
                 {errors.no_of_slices && (
-                    <div className='error'>{errors.no_of_slices}</div>
+                    <div className='error'><FormattedMessage id={'required'}/></div>
                 )}
             </div>
 
@@ -45,7 +45,7 @@ const PizzaFields: React.FC<PizzaFieldsProps> = ({
                     step={0.1}
                 />
                 { errors.diameter && (
-                    <div className='error'>{errors.diameter}</div>
+                    <div className='error'><FormattedMessage id={'required'}/></div>
                 )}
             </div>
         </>

@@ -3,7 +3,6 @@ import {Slider} from 'antd';
 import { FormattedMessage } from 'react-intl';
 
 interface SoupFieldsProps {
-    handleChange: (value: number | null) => void;
     handleBlur: (e: React.FocusEvent<any>) => void;
     values: any;
     errors: any;
@@ -26,7 +25,7 @@ const SoupFields: React.FC<SoupFieldsProps> = ({
                     step={1}
                 />
                 {errors.spiciness_scale && (
-                    <div className='error'>{errors.spiciness_scale}</div>
+                    <div className='error'><FormattedMessage id={'required'}/></div>
                 )}
             </div>
 

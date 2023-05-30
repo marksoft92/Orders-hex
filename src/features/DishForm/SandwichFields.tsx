@@ -3,11 +3,10 @@ import { InputNumber } from 'antd';
 import { FormattedMessage } from 'react-intl';
 
 interface SandwichFieldsProps {
-    handleChange: (value: number | null) => void;
+
     handleBlur: (e: React.FocusEvent<any>) => void;
     values: any;
     errors: any;
-
     setFieldValue: (field: string, value: any) => void;
 }
 
@@ -15,7 +14,6 @@ const SandwichFields: React.FC<SandwichFieldsProps> = ({
     handleBlur,
     values,
     errors,
-
     setFieldValue
 }) => {
 
@@ -34,7 +32,7 @@ const SandwichFields: React.FC<SandwichFieldsProps> = ({
                     keyboard={false}
                 />
                 { errors.slices_of_bread && (
-                    <div className='error'>{errors.slices_of_bread}</div>
+                    <div className='error'><FormattedMessage id={'required'}/></div>
                 )}
             </div>
 

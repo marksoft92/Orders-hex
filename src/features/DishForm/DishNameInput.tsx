@@ -29,7 +29,7 @@ const DishNameInput: React.FC<DishNameInputProps> = ({
                 value={value}
             />
 
-            {error && <div className='error'>{error}</div>}
+            {error && <div className='error'><FormattedMessage id={'required'}/></div>}
         </div>
     );
 };

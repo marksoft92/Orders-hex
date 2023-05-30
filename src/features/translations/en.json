@@ -22,5 +22,6 @@
     "name": "Dish name",
     "type.pizza": "Pizza",
     "type.soup": "Soup",
-    "type.sandwich": "Sandwich"
+    "type.sandwich": "Sandwich",
+    "required": "Field is required"
 }    

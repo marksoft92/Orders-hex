@@ -1,5 +1,3 @@
-// DishTypeSelect.tsx
-
 import React from 'react';
 import { Select } from 'antd';
 import { FormattedMessage } from 'react-intl';
@@ -7,7 +5,6 @@ import { FormattedMessage } from 'react-intl';
 const { Option } = Select;
 
 interface DishTypeSelectProps {
-    handleChange: (value: any) => void;
     handleBlur: (e: React.FocusEvent<any>) => void;
     value: string;
     error?: string;
@@ -15,7 +12,6 @@ interface DishTypeSelectProps {
 }
 
 const DishTypeSelect: React.FC<DishTypeSelectProps> = ({
-    handleChange,
     handleBlur,
     value,
     error,
@@ -34,7 +30,7 @@ const DishTypeSelect: React.FC<DishTypeSelectProps> = ({
                 <Option value="soup"><FormattedMessage id="type.soup" /></Option>
                 <Option value="sandwich"><FormattedMessage id="type.sandwich" /></Option>
             </Select>
-            { error && <div className='error'>{error}</div>}
+            {error && <div className='error'><FormattedMessage id={'required'}/></div>}
         </div>
     );
 };

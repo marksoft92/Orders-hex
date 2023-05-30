@@ -31,7 +31,6 @@ const DishForm: React.FC<FormikProps<FormValues>> = ({
     handleBlur,
     values,
     errors,
-    touched,
     setFieldValue,
     isValid
 }) => {
@@ -48,26 +47,21 @@ const DishForm: React.FC<FormikProps<FormValues>> = ({
                 error={errors.name}
             />
             <PreparationTimeInput
-                handleChange={handleChange}
                 handleBlur={handleBlur}
-                value={values.preparation_time}
                 error={errors.preparation_time}
                 setFieldValue={setFieldValue}
             />
             <DishTypeSelect
-                handleChange={handleChange}
                 handleBlur={handleBlur}
                 value={values.type}
                 error={errors.type}
                 setFieldValue={setFieldValue}
             />
             {values.type && React.createElement(dishComponents[values.type], {
-                handleChange,
                 setFieldValue,
                 handleBlur,
                 values,
                 errors,
-
             })}
             <Button disabled={!isValid} type="primary" htmlType="submit">
                 <FormattedMessage id="submit" />

@@ -22,5 +22,6 @@
     "name": "Nazwa potrawy",
     "type.pizza": "Pizza",
     "type.soup": "Zupa",
-    "type.sandwich": "Kanapki"
+    "type.sandwich": "Kanapki",
+    "required": "Pole jest wymagane"
 }    
