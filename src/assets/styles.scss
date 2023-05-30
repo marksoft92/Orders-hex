@@ -1,0 +1,57 @@
+.content {
+    display: flex;
+   ul {
+    width: 10rem;
+    background: #f1efef;
+    color: #000;
+
+    .ant-menu-item {
+        img {
+            width: 30px;
+        }
+    }
+   }
+}
+
+.pizzaForm {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 0 auto;
+  
+    label {
+      margin-right: 1rem;
+      width: 20%;
+    }
+  
+    input,
+    .ant-select,
+    .ant-input-number,
+    .ant-picker,
+    .ant-slider
+     {
+     width: 80%;
+      margin-bottom: 10px;
+    }
+  
+  
+  
+    .ant-btn {
+      margin-top: 10px;
+    }
+  
+    .error-message {
+      color: red;
+      margin-top: 5px;
+    }
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .d-flex {
+    margin: 1rem;
+    display: flex;
+  }
